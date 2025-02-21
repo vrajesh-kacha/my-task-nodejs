@@ -1,5 +1,4 @@
 import Employee from "../models/employeeModel.js";
-
 export const addEmployee = async (req, res) => {
   try {
     const employee = await Employee.create(req.body);
@@ -72,3 +71,7 @@ export const getEmployees = async (req, res) => {
     return res.status(500).send({ success: false, message: error.message });
   }
 };
+
+
+
+
